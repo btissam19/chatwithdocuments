@@ -78,10 +78,10 @@ def create_docx_report(chat_history, file_name="report.docx"):
 
     for message in chat_history:
         if message['role'] == 'user':
-            doc.add_heading('You:', level=1)
+            doc.add_heading('qustions :', level=1)
             doc.add_paragraph(message['text'])
         else:
-            doc.add_heading('Assistant:', level=1)
+            doc.add_heading('awnser:', level=1)
             doc.add_paragraph(message['text'])
 
     doc.save(file_name)
